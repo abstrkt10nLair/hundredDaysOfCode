@@ -9,8 +9,8 @@
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 const testArrayOne = [1, 2, 2, 3]
-const testArrayTwo = [2, 4]
-const testArrayThree = []
+const testArrayTwo = [2, 3, 4]
+const testArrayThree = [5]
 
 function arrayDiff(arrayOne, arrayTwo) {
   let returnArray = arrayOne
@@ -21,3 +21,5 @@ function arrayDiff(arrayOne, arrayTwo) {
   }
   return returnArray
 }
+
+console.log(arrayDiff(testArrayOne, testArrayTwo))
