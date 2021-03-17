@@ -38,3 +38,8 @@ function arrayDiff(arrayOne, arrayTwo) {
 }
 
 console.log(arrayDiff(testArrayOne, testArrayTwo))
+
+// best practice solution
+// function array_diff(a, b) {
+//   return a.filter(e => !b.includes(e));
+// }
