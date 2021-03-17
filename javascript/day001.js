@@ -8,6 +8,16 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-function arrayDiff(a, b) {
+const testArrayOne = [1, 2, 2, 3]
+const testArrayTwo = [2, 4]
+const testArrayThree = []
 
+function arrayDiff(arrayOne, arrayTwo) {
+  let returnArray = arrayOne
+  for (let i = 0; i < arrayTwo.length; i++) {
+    if (returnArray.includes(arrayTwo[i])) {
+      returnArray.splice(returnArray.indexOf(arrayTwo[i]), 1)
+    }
+  }
+  return returnArray
 }
