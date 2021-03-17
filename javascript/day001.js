@@ -12,11 +12,26 @@ const testArrayOne = [1, 2, 2, 3]
 const testArrayTwo = [2, 3, 4]
 const testArrayThree = [5]
 
+// attempt 01
+
+// function arrayDiff(arrayOne, arrayTwo) {
+//   let returnArray = arrayOne
+//   for (let i = 0; i < arrayTwo.length; i++) {
+//     if (returnArray.includes(arrayTwo[i])) {
+//       returnArray.splice(returnArray.indexOf(arrayTwo[i]), 1)
+//     }
+//   }
+//   return returnArray
+// }
+
+// console.log(arrayDiff(testArrayOne, testArrayTwo))
+
 function arrayDiff(arrayOne, arrayTwo) {
+  let itemsToRemove = arrayOne.filter(arrayItems => arrayTwo.includes(arrayItems))
   let returnArray = arrayOne
-  for (let i = 0; i < arrayTwo.length; i++) {
-    if (returnArray.includes(arrayTwo[i])) {
-      returnArray.splice(returnArray.indexOf(arrayTwo[i]), 1)
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    if (returnArray.includes(itemsToRemove[i])) {
+      returnArray.splice(returnArray.indexOf(itemsToRemove[i]), 1)
     }
   }
   return returnArray
