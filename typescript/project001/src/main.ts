@@ -1,2 +1,5 @@
-const a = "1"
-console.log(`aaa`, a)
+const getFullName = (name: string, surname: string) => {
+  return name + " " + surname
+}
+
+console.log(getFullName(`bob`, `dylan`))
