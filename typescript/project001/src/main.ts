@@ -2,18 +2,25 @@ const getFullName = (name: string, surname: string): string => {
   return name + " " + surname
 }
 
-interface User {
+interface UserInterface {
   name: string,
-  age?: number
+  age?: number,
+  getMessage(): string
 }
 
-const user01: User = {
+const user01: UserInterface = {
   name: "bilal",
-  age: 31
+  age: 31,
+  getMessage() {
+    return "Hello " + this.name
+  }
 }
 
-const user02: User = {
-  name: "jack"
+const user02: UserInterface = {
+  name: "jack",
+  getMessage() {
+    return "Hello " + this.name
+  }
 }
 
-console.log(user01.name)
+console.log(user01.getMessage())
