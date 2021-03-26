@@ -9,7 +9,7 @@ interface UserInterface {
 }
 
 const user01: UserInterface = {
-  name: "bilal",
+  name: "Bilal",
   age: 31,
   getMessage() {
     return "Hello " + this.name
@@ -17,7 +17,7 @@ const user01: UserInterface = {
 }
 
 const user02: UserInterface = {
-  name: "jack",
+  name: "Jack",
   getMessage() {
     return "Hello " + this.name
   }
